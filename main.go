@@ -11,11 +11,12 @@ type Message struct {
 }
 
 func main() {
+	port := "8800"
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
 		u := new(Message)
 		u.Message = "Hello World!"
 		return c.JSON(http.StatusOK, u)
 	})
-	e.Logger.Fatal(e.Start(":0"))
+	e.Logger.Fatal(e.Start(port))
 }
