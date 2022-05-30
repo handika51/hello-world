@@ -11,7 +11,7 @@ type Message struct {
 }
 
 func main() {
-	port := "https://108.136.160.138:443/"
+	port := "https://108.136.160.138:443"
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
 		u := new(Message)
