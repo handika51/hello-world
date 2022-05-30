@@ -17,5 +17,5 @@ func main() {
 		u.Message = "Hello World!"
 		return c.JSON(http.StatusOK, u)
 	})
-	e.Logger.Fatal(e.Start(":234"))
+	e.Logger.Fatal(e.Start(":0"))
 }
